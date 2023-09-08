@@ -141,12 +141,8 @@ button:hover {
   height: 50px;
   font-size: 15px;
   text-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .thumbnail {
   width: 50%;
-  margin-top: auto;
-  margin-bottom: auto;
 }

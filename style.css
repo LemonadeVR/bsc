@@ -99,15 +99,18 @@ nav ul li:not(.current) a:hover {
 }
 
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  margin-top: 70px;
-  padding: 20px;
-	padding-left: 80px;
-	padding-right: 80px;
-  border-radius: 5px;
-  background-color: var(--black);
-}
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 70px;
+      padding: 20px;
+      padding-left: 80px;
+      padding-right: 80px;
+      border-radius: 5px;
+      background-color: var(--black);
+      display: flex; /* Use Flexbox */
+      justify-content: center; /* Center align items horizontally */
+      align-items: center; /* Center align items vertically */
+    }
 
 button {
 	border: none;
@@ -132,16 +135,18 @@ button:hover {
 }
 
 .ql {
-	background-color: var(--accent-color);
-	border-radius: 5px;
-	width: 150px;
-	height: 50px;
-	font-size: 15px;
-	text-align: center;
-	margin-left: 225px;
-}
+      background-color: var(--accent-color);
+      border-radius: 5px;
+      width: 150px;
+      height: 50px;
+      font-size: 15px;
+      text-align: center;
+      margin-left: auto; /* Adjusted to auto */
+      margin-right: auto; /* Adjusted to auto */
+    }
 
-.thumbnail {
-	width: 50%;
-	margin-left: 140px;
-}
+    .thumbnail {
+      width: 50%;
+      margin-left: auto; /* Adjusted to auto */
+      margin-right: auto; /* Adjusted to auto */
+    }

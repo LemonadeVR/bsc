@@ -36,28 +36,25 @@ function releases(project) {
 }
 
 
-setInterval(() => {
-const divElements = document.getElementsByClassName('container');
-const divElement = divElements[0];
-const computedStyle = window.getComputedStyle(divElement);
-const divWidth = divElement.offsetWidth;
-const paddingLeft = parseFloat(computedStyle.paddingLeft);
-const paddingRight = parseFloat(computedStyle.paddingRight);
-const borderLeft = parseFloat(computedStyle.borderLeftWidth);
-const borderRight = parseFloat(computedStyle.borderRightWidth);
-const totalWidth = divWidth + paddingLeft + paddingRight + borderLeft + borderRight;
+window.addEventListener('resize', adjustElementPositions);
 
+    function adjustElementPositions() {
+      const container = document.querySelector('.container');
+      const thumbnail = document.querySelector('.thumbnail');
+      const ql = document.querySelector('.ql');
 
-const qlElements = document.getElementsByClassName('ql');
+      const containerWidth = container.offsetWidth;
+      const thumbnailWidth = thumbnail.offsetWidth;
+      const qlWidth = ql.offsetWidth;
 
-for (let i = 0; i < qlElements.length; i++) {
-	qlElements[i].style.marginLeft = `${((totalWidth/2)-paddingLeft)-(150/2)}`;
-}
+      const marginThumbnail = (containerWidth - thumbnailWidth) / 2;
+      const marginQL = (containerWidth - qlWidth) / 2;
 
+      thumbnail.style.marginLeft = `${marginThumbnail}px`;
+      thumbnail.style.marginRight = `${marginThumbnail}px`;
 
-const thumbnailElements = document.getElementsByClassName('thumbnail');
+      ql.style.marginLeft = `${marginQL}px`;
+      ql.style.marginRight = `${marginQL}px`;
+    }
 
-for (let i = 0; i < thumbnailElements.length; i++) {
-  thumbnailElements[i].style.marginLeft = `${((totalWidth/2)-paddingLeft)-((totalWidth-paddingLeft-paddingRight)/4)}px`;
-}
-}, 500);
+adjustElementPositions();

@@ -34,3 +34,14 @@ function releases(project) {
 		window.open('https://totallylemonade.itch.io/kittenonthetaskbar', "_blank");
 	}
 }
+
+
+const divElements = document.getElementsByClassName('container');
+const divElement = divElements[0];
+const computedStyle = window.getComputedStyle(divElement);
+const divWidth = divElement.offsetWidth;
+const paddingLeft = parseFloat(computedStyle.paddingLeft);
+const paddingRight = parseFloat(computedStyle.paddingRight);
+const borderLeft = parseFloat(computedStyle.borderLeftWidth);
+const borderRight = parseFloat(computedStyle.borderRightWidth);
+const totalWidth = divWidth + paddingLeft + paddingRight + borderLeft + borderRight;

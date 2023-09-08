@@ -34,27 +34,3 @@ function releases(project) {
 		window.open('https://totallylemonade.itch.io/kittenonthetaskbar', "_blank");
 	}
 }
-
-
-window.addEventListener('resize', adjustElementPositions);
-
-function adjustElementPositions() {
-  const container = document.querySelector('.container');
-  const thumbnail = document.querySelector('.thumbnail');
-  const ql = document.querySelector('.ql');
-
-  const containerHeight = container.offsetHeight;
-  const thumbnailHeight = thumbnail.offsetHeight;
-  const qlHeight = ql.offsetHeight;
-
-  const marginThumbnail = (containerHeight - thumbnailHeight) / 2;
-  const marginQL = (containerHeight - qlHeight) / 2;
-
-  thumbnail.style.marginTop = `${marginThumbnail}px`;
-  thumbnail.style.marginBottom = `${marginThumbnail}px`;
-
-  ql.style.marginTop = `${marginQL}px`;
-  ql.style.marginBottom = `${marginQL}px`;
-}
-
-adjustElementPositions();

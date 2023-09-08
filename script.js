@@ -47,6 +47,7 @@ const borderRight = parseFloat(computedStyle.borderRightWidth);
 const totalWidth = divWidth + paddingLeft + paddingRight + borderLeft + borderRight;
 
 
+setInterval(() => {
 const qlElements = document.getElementsByClassName('ql');
 
 for (let i = 0; i < qlElements.length; i++) {
@@ -59,3 +60,4 @@ const thumbnailElements = document.getElementsByClassName('thumbnail');
 for (let i = 0; i < thumbnailElements.length; i++) {
   thumbnailElements[i].style.marginLeft = `${((totalWidth/2)-paddingLeft)-((totalWidth-paddingLeft-paddingRight)/4)}px`;
 }
+}, 500);

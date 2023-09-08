@@ -98,21 +98,6 @@ nav ul li:not(.current) a:hover {
   background-color: var(--dark-gray);
 }
 
-.container {
-      max-width: 600px;
-      margin: 0 auto;
-      margin-top: 70px;
-      padding: 20px;
-      padding-left: 80px;
-      padding-right: 80px;
-      border-radius: 5px;
-      background-color: var(--black);
-      display: flex; /* Use Flexbox */
-	flex-direction: column;
-      justify-content: center; /* Center align items horizontally */
-      align-items: center; /* Center align items vertically */
-    }
-
 button {
 	border: none;
 	outline: none;
@@ -135,19 +120,33 @@ button:hover {
 	background-color: var(--dark-gray);
 }
 
-.ql {
-      background-color: var(--accent-color);
-      border-radius: 5px;
-      width: 150px;
-      height: 50px;
-      font-size: 15px;
-      text-align: center;
-      margin-left: auto; /* Adjusted to auto */
-      margin-right: auto; /* Adjusted to auto */
-    }
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 70px;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  border-radius: 5px;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .thumbnail {
-      width: 50%;
-      margin-left: auto; /* Adjusted to auto */
-      margin-right: auto; /* Adjusted to auto */
-    }
+.ql {
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.thumbnail {
+  width: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+}

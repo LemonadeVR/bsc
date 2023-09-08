@@ -108,6 +108,7 @@ nav ul li:not(.current) a:hover {
       border-radius: 5px;
       background-color: var(--black);
       display: flex; /* Use Flexbox */
+	flex-direction: both;
       justify-content: center; /* Center align items horizontally */
       align-items: center; /* Center align items vertically */
     }

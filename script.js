@@ -36,6 +36,7 @@ function releases(project) {
 }
 
 
+setInterval(() => {
 const divElements = document.getElementsByClassName('container');
 const divElement = divElements[0];
 const computedStyle = window.getComputedStyle(divElement);
@@ -47,7 +48,6 @@ const borderRight = parseFloat(computedStyle.borderRightWidth);
 const totalWidth = divWidth + paddingLeft + paddingRight + borderLeft + borderRight;
 
 
-setInterval(() => {
 const qlElements = document.getElementsByClassName('ql');
 
 for (let i = 0; i < qlElements.length; i++) {

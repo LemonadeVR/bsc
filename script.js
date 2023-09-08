@@ -56,6 +56,6 @@ for (let i = 0; i < qlElements.length; i++) {
 
 const thumbnailElements = document.getElementsByClassName('thumbnail');
 
-for (let i = 0; i < qlElements.length; i++) {
-	qlElements[i].style.marginLeft = `${((totalWidth/2)-paddingLeft)-((totalWidth-paddingLeft-paddingRight)/4)}`;
+for (let i = 0; i < thumbnailElements.length; i++) {
+  thumbnailElements[i].style.marginLeft = `${((totalWidth/2)-paddingLeft)-((totalWidth-paddingLeft-paddingRight)/4)}px`;
 }

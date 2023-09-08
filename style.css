@@ -142,5 +142,6 @@ button:hover {
 }
 
 .thumbnail {
+	width: 50%;
 	margin-left: 140px;
 }

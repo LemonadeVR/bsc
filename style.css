@@ -145,4 +145,5 @@ button:hover {
 
 .thumbnail {
   width: 50%;
+	height: auto;
 }

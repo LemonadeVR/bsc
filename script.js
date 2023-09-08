@@ -45,3 +45,17 @@ const paddingRight = parseFloat(computedStyle.paddingRight);
 const borderLeft = parseFloat(computedStyle.borderLeftWidth);
 const borderRight = parseFloat(computedStyle.borderRightWidth);
 const totalWidth = divWidth + paddingLeft + paddingRight + borderLeft + borderRight;
+
+
+const qlElements = document.getElementsByClassName('ql');
+
+for (let i = 0; i < qlElements.length; i++) {
+	qlElements[i].style.marginLeft = `${((totalWidth/2)-paddingLeft)-(150/2)}`;
+}
+
+
+const thumbnailElements = document.getElementsByClassName('thumbnail');
+
+for (let i = 0; i < qlElements.length; i++) {
+	qlElements[i].style.marginLeft = `${((totalWidth/2)-paddingLeft)-((totalWidth-paddingLeft-paddingRight)/4)}`;
+}
